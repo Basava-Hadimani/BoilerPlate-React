@@ -1,0 +1,90 @@
+#head, .header{
+	background-color: #000066;
+}
+#head{
+	display : block;
+	height : 60px;
+}
+
+.header{
+		cursor : wait
+}
+
+.footer{
+	background-color: #4444;
+	color : black;
+}
+
+
+.canvas{
+
+	background-color: #4444;
+	border : 5px solid #000066;
+
+}
+
+.parent, .hideParent{
+	background-color : #9999;
+	border-radius: 25%;
+	visibility: visible;
+	position: relative;
+	height : 200px;
+	width : 200px;
+	border : 1px solid red;
+	top : 70px;
+	left: 85%;
+	-webkit-transition: left 2s;
+	transition: left 2s;
+}
+.child, .hideChild{
+
+	position : absolute;
+	background-color : #ffccff;
+	border-radius: 25%;
+	border : 1px solid blue;
+	top : 80px;
+	left: -35%;
+	height : 30px;
+	width : 70px;
+	-webkit-transition: left 0.5s;
+	transition: left 0.5s;
+	cursor : e-resize;
+	text-align:center;
+}
+
+.hideParent{
+	left: 100%;
+}
+
+.hideChild{
+	cursor : w-resize;
+}
+
+.box{
+	display : block;
+	position : relative;
+	top : -400px;
+	right : 0px;
+}
+
+#Element1, #Element2, #Element3, #Element4{
+	disply : block;
+	height : 30px;
+	width : 150px;
+	position : absolute;
+	top : 30px;
+	left : 20px;
+	border : 1px solid #9999;
+	text-align:center;
+	color : red;
+}
+
+#Element2{
+	top : 70px;
+}
+#Element3{
+	top : 110px;
+}
+#Element4{
+	top : 150px;
+}

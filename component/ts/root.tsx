@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 import Head from './head.tsx';
 import Title from './title.tsx';
 import Foot from './foot.tsx';
-import IndexForm from './indexForm.tsx';
+import IndexForm from './indexForm.jsx';
 
 
 ReactDOM.render(<Head />, document.getElementById('head'));
