@@ -67,7 +67,7 @@
 	right : 0px;
 }
 
-#Element1, #Element2, #Element3, #Element4{
+#circle, #triangle, #square, #rectangle{
 	disply : block;
 	height : 30px;
 	width : 150px;
@@ -79,12 +79,12 @@
 	color : red;
 }
 
-#Element2{
+#triangle{
 	top : 70px;
 }
-#Element3{
+#square{
 	top : 110px;
 }
-#Element4{
+#rectangle{
 	top : 150px;
 }
