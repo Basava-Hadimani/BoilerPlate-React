@@ -1,5 +1,5 @@
 var config = {
-   entry: './component/ts/root.tsx',
+   entry: './component/ts/root.jsx',
    output: {
       filename: './output/bundle.js',
    },
@@ -19,22 +19,24 @@ var config = {
             test: /\.jsx?$/,
             exclude: /node_modules/,
             loader: 'babel-loader',
-            query: {
-               presets: ['es2015', 'react']
-            }
          },
 		 {
 			test: /\.scss$/,
 			use: [
 			{loader: "style-loader"},
 			{loader: "css-loader" },
-			{loader: "sass-loader"}]
-		 },
-		 {
-			test: /\.tsx$/,
-            exclude: /node_modules/,
-            loader: 'ts-loader',
-
+			{loader: "sass-loader",
+             options: {
+             importer: function(url, prev) {
+             if(url.indexOf('@material') === 0) {
+             var filePath = url.split('@material')[1];
+             var nodeModulePath = `./node_modules/@material/${filePath}`;
+             return { file: require('path').resolve(nodeModulePath) };
+            }
+             return { file: url };
+           }
+         }
+         }]
 		 }
       ]
    }
